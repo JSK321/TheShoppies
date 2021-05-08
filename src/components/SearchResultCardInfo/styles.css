@@ -1,0 +1,14 @@
+.cardNomBtn {
+    padding: 0; 
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 1rem;
+}
+.cardNomBtn:disabled {
+    padding: 0; 
+    border: none;
+    background: none;
+    cursor: not-allowed;
+}

@@ -1,0 +1,39 @@
+.searchDiv {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: end;
+}
+
+.media {
+    display: flex;
+    height: 400px;
+}
+
+.nominateBtn {
+    padding: 0; 
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 22px;
+}
+
+.nominateBtn:disabled {
+    padding: 0; 
+    border: none;
+    background: none;
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 400px) {
+    .searchDiv {
+        height: 420px;
+    }
+
+    .media {
+        height: 250px;
+    }
+}
