@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# The Shoppies
+[![GPLv3 license](https://img.shields.io/badge/License-MIT-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+## Description
+    Shopify has branched out into movie award shows and we need your help. Please build us an app to help manage our movie nominations for the upcoming Shoppies.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The Challenge
+    We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
+        
+## React-Application
+View the application at: https://jsk-the-shoppies.herokuapp.com/
 
-## Available Scripts
+## Table of Contents
+- [Installation](#installation)
 
-In the project directory, you can run:
+- [Usage](#usage)
 
-### `npm start`
+- [Screenshot](#screenshot)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Contributors](#contributors)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Questions](#questions)
 
-### `npm test`
+- [Technology](#technology)
+    
+## Installation
+NPM packages axios, material-ui/core, @material-ui/core, @material-ui/icons must be installed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
+    Any user is able to nominate their movie of choice! They are able to search for movies using the search bar, which will bring up a result of movies. If the user clicks on the poster of the movie, a popup with more details about the movie will appear. A user is then able to nominate their movie of choice by clicking on the nominate button. It will then save the nominated movie into their list and disable the button, a user is able to remove their nomination by pressing the remove button. Once five movies have been nominated, a banner will show congratulating their vote for The Shoppies!
+## Screenshot
+## Movie Search with expanded details
+![Shoppies movie search](https://i.imgur.com/jm4b2jl.png)
+## Movie nomination notification
+![Shoppies nomination added](https://i.imgur.com/dJadJQ8.png)
+## Movie nomination complete notification
+![Shoppies completed message](https://i.imgur.com/k1Njvof.png)
+## Mobile View
+![Shoppies mobile view](https://i.imgur.com/VYdJzmp.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        
+## Contributors
+[JSK321](https://github.com/JSK321)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technology
+- JavaScript
+- [React.js](https://reactjs.org/)
+- [Material-UI](https://material-ui.com/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Questions
+View my other [projects!](https://github.com/JSK321?tab=repositories)
 
-### `npm run eject`
+Have any questions?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Email me at: jaeshinkim321@gmail.com
