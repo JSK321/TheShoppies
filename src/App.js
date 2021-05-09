@@ -7,7 +7,7 @@ import SearchField from './components/SearchField';
 import SearchResult from './components/SearchResult';
 import NomList from './components/NomList';
 // Material-UI Components
-import { Container, Grid, makeStyles, Snackbar, } from '@material-ui/core';
+import { Container, Grid, makeStyles, Snackbar, Grow } from '@material-ui/core';
 // CSS
 import './App.css'
 const useStyles = makeStyles(() => ({
@@ -39,6 +39,7 @@ function App() {
   });
   // Grow transition
   const [checked, setChecked] = useState(true);
+  const [test, setTest] = useState(false)
 
   // Check localstorage for nominees
   useEffect(() => {
@@ -85,6 +86,7 @@ function App() {
       setNominations({
         nominees: update
       });
+      setTest(true)
       // set local storage with nominee list
       localStorage.setItem('SHOPPIES', JSON.stringify(nominations.nominees));
     }
@@ -103,7 +105,6 @@ function App() {
     event.preventDefault();
     if (searchState !== null && searchState !== "") {
       API.searchMovie(searchState).then(function (res) {
-        // console.log(res)
         if (res.data.Response === 'False') {
           setOpen({
             ...open,
@@ -156,7 +157,6 @@ function App() {
         });
       }
     };
-
     button.disabled = true;
   };
 
@@ -259,10 +259,13 @@ function App() {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <NomList
-            nominations={nominations.nominees}
-            handleRemoveBtn={handleRemoveBtn}
-          />
+          <Grow in={test} timeout={500}>
+            <NomList
+              nominations={nominations.nominees}
+              handleRemoveBtn={handleRemoveBtn}
+              checked={test}
+            />
+          </Grow>
         </Grid>
       </Grid>
     </Container>

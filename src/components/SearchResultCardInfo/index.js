@@ -13,7 +13,7 @@ import './styles.css';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '350px',
-        background: 'slategrey',
+        background: 'hsla(216, 15%, 52%, 1)',
         color: 'black'
     },
     inputField: {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 // Components
 import SearchResultCardInfo from '../SearchResultCardInfo';
 // Material-UI Components
@@ -16,14 +16,14 @@ const useStyles = makeStyles({
         border: '1px solid floralwhite',
         padding: '1rem',
         marginBottom: '1rem',
-        background:'transparent'
+        background: 'transparent'
     },
     cardAction: {
         display: 'flex',
         justifyContent: "center",
         fontSize: '24px',
         fontWeight: 'bold',
-        color:"floralwhite"
+        color: "floralwhite"
     },
 });
 
@@ -31,6 +31,11 @@ export default function SearchResult(props) {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = useState(null);
     const [movieTitle, setMovieTitle] = useState(null);
+    // scroll bar to top callback
+    const setRef = useCallback(node => {
+        let list = document.getElementById('searchList');
+        list.scrollTop = 0
+    }, [props.movies]);
 
     const handleClick = event => {
         let id = event.currentTarget.id;
@@ -47,7 +52,7 @@ export default function SearchResult(props) {
 
     return (
         <div className="searchDiv">
-            <List className={classes.results}>
+            <List className={classes.results} ref={setRef} id="searchList">
                 {!props.movies || props.movies < 1 ?
                     null
                     :
@@ -84,7 +89,7 @@ export default function SearchResult(props) {
 
                                     />
                                 </Popover>
-                                <CardContent className={classes.cardAction} style={{fontFamily:"cursive"}}>
+                                <CardContent className={classes.cardAction} style={{ fontFamily: "cursive" }}>
                                     {movie.Title} - {movie.Year}
                                 </CardContent>
                                 <CardActions>
@@ -93,7 +98,7 @@ export default function SearchResult(props) {
                                         name={movie.Title}
                                         onClick={props.handleNominateBtn}
                                         className="nominateBtn"
-                                        style={{color:'whitesmoke'}}
+                                        style={{ color: 'whitesmoke' }}
                                     >
                                         Nominate
                                 </button>
