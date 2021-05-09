@@ -7,7 +7,7 @@ import SearchField from './components/SearchField';
 import SearchResult from './components/SearchResult';
 import NomList from './components/NomList';
 // Material-UI Components
-import { Container, Grid, makeStyles, Snackbar, Grow } from '@material-ui/core';
+import { Container, Grid, makeStyles, Snackbar } from '@material-ui/core';
 // CSS
 import './App.css'
 const useStyles = makeStyles(() => ({
@@ -39,8 +39,6 @@ function App() {
   });
   // Grow transition
   const [checked, setChecked] = useState(true);
-  const [test, setTest] = useState(false)
-
   // Check localstorage for nominees
   useEffect(() => {
     let savedNominees = JSON.parse(localStorage.getItem('SHOPPIES'));
@@ -86,7 +84,6 @@ function App() {
       setNominations({
         nominees: update
       });
-      setTest(true)
       // set local storage with nominee list
       localStorage.setItem('SHOPPIES', JSON.stringify(nominations.nominees));
     }
@@ -205,7 +202,7 @@ function App() {
             handleSearchMovie={handleSearchMovie}
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={6} md={6}>
           <SearchResult
             movies={movieList.movies}
             handleNominateBtn={handleNominateBtn}
@@ -258,14 +255,11 @@ function App() {
             message="Congratulations! Your nominations will be registered with others. Thank you for participating!"
           />
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Grow in={test} timeout={500}>
+        <Grid item xs={12} sm={6} md={6}>
             <NomList
               nominations={nominations.nominees}
               handleRemoveBtn={handleRemoveBtn}
-              checked={test}
             />
-          </Grow>
         </Grid>
       </Grid>
     </Container>

@@ -30,13 +30,13 @@ Any user is able to nominate their movie of choice! They are able to search for 
 
 ## Screenshot
 ## Movie Search with expanded details
-![Shoppies movie search](https://i.imgur.com/jm4b2jl.png)
+![Shoppies movie search](https://i.imgur.com/ADcdzK1.png)
 ## Movie nomination notification
-![Shoppies nomination added](https://i.imgur.com/dJadJQ8.png)
-## Movie nomination complete notification
-![Shoppies completed message](https://i.imgur.com/k1Njvof.png)
+![Shoppies nomination added](https://i.imgur.com/8L5CSVC.png)
+## Movie nomination completed notification
+![Shoppies completed message](https://i.imgur.com/2x2OuWT.png)
 ## Mobile View
-![Shoppies mobile view](https://i.imgur.com/VYdJzmp.png)
+![Shoppies mobile view](https://i.imgur.com/BKoYrjy.png)
 
 
         
